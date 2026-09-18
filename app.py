@@ -56,8 +56,8 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1, 3, 1])
 with col1:
-    if os.path.exists("logo/lab_logo.png"):
-        st.image("logo/lab_logo.png", width=220)
+    if os.path.exists("logo/Lab_logo.png"):
+        st.image("logo/Lab_logo.png", width=220)
 with col3:
     if os.path.exists("logo/dongguk_logo.png"):
         st.image("logo/dongguk_logo.png", width=300)
