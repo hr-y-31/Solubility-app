@@ -77,6 +77,7 @@ if smiles:
                     )
                     result = response.choices[0].message.content
                     st.write(result)
+                    st.caption("⚠️위 내용은 AI가 생성한 참고용 답변이며, 부정확할 수 있습니다.")
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown(
