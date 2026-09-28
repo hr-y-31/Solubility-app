@@ -59,6 +59,7 @@ if smiles:
 
         with st.container(border=True):
             st.subheader("AI 용해도 개선 제안")
+            st.warning("⚠️ AI는 실수를 할 수 있습니다. 결과는 참고용으로만 사용하시고, 실제 연구에는 반드시 실험 데이터로 검증해주세요.")
             ask_ai = st.button("DeepSeek-R1에게 개선 방법 물어보기")
             if ask_ai:
                 with st.spinner("AI가 생각 중이에요..."):
