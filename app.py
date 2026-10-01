@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
-st.set_page_config(page_title="난용성 약물 용해도 예측기", layout="wide")
+st.set_page_config(page_title="약물 용해도 예측기", layout="wide")
 
 st.markdown("## Solubility Predictor for Poorly Soluble Drugs")
 st.markdown("##### Lab. of Drug Delivery, Dongguk University")
