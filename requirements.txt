@@ -2,4 +2,3 @@ streamlit
 rdkit
 pandas
 scikit-learn
-openai
