@@ -78,7 +78,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 # 2. 첨가제(폴리머) 효과 예측 — 초안 (예시 데이터 기반)
 # ============================================================
 with st.container(border=True):
-    st.subheader("2️⃣ 첨가제(폴리머) 효과 예측 — 초안")
+    st.subheader("2️⃣ 첨가제 효과 예측 — 초안")
     st.warning(
         "⚠️ 이 섹션은 랩실 실제 실험 데이터가 아직 들어가지 않은 **구조 초안**입니다. "
         "아래 결과는 코드 구조 확인용 예시 데이터로 학습된 것이며, 실제 과학적 정확도를 갖고 있지 않습니다. "
@@ -90,7 +90,7 @@ with st.container(border=True):
         drug_smiles = st.text_input("약물 SMILES", key="drug_smiles2",
                                      placeholder="예: CC(=O)OC1=CC=CC=C1C(=O)O")
     with colB:
-        add_smiles = st.text_input("첨가제(폴리머) SMILES", key="add_smiles2",
+        add_smiles = st.text_input("첨가제 SMILES", key="add_smiles2",
                                     placeholder="예: 폴리머 단량체 SMILES")
 
     colC, colD = st.columns(2)
