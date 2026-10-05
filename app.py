@@ -73,7 +73,8 @@ if smiles:
 with col_img:
     img = Draw.MolToImage(mol, size=(250, 250))
     st.image(img, caption="2D 구조")
-
+    
+col_img, col_3d = st.columns(2)
 with col_3d:
     st.caption("3D 구조 (마우스로 드래그해서 회전 가능)")
     mol_3d = Chem.AddHs(mol)
