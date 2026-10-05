@@ -2,3 +2,4 @@ streamlit
 rdkit
 pandas
 scikit-learn
+py3Dmol
