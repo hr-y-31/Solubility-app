@@ -1,6 +1,8 @@
 import streamlit as st
 from rdkit import Chem
-from rdkit.Chem import Descriptors, Draw, Lipinski
+from rdkit.Chem import Descriptors, Draw, Lipinski, AllChem
+from stmol import showmol
+import py3Dmol
 import os
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
