@@ -79,17 +79,21 @@ with col_img:
 col_img, col_3d = st.columns(2)
 with col_3d:
     st.caption("3D 구조 (마우스로 드래그해서 회전 가능)")
-    mol_3d = Chem.AddHs(mol)
-    from rdkit.Chem import AllChem
-    AllChem.EmbedMolecule(mol_3d, randomSeed=42)
-    AllChem.MMFFOptimizeMolecule(mol_3d)
-    mol_block = Chem.MolToMolBlock(mol_3d)
+    try:
+        mol_3d = Chem.AddHs(mol)
+        AllChem.EmbedMolecule(mol_3d, randomSeed=42)
+        AllChem.MMFFOptimizeMolecule(mol_3d)
+        mol_block = Chem.MolToMolBlock(mol_3d)
 
-    viewer = py3Dmol.view(width=350, height=350)
-    viewer.addModel(mol_block, "mol")
-    viewer.setStyle({"stick": {}})
-    viewer.zoomTo()
-    showmol(viewer, height=350, width=350)
+        viewer = py3Dmol.view(width=350, height=350)
+        viewer.addModel(mol_block, "mol")
+        viewer.setStyle({"stick": {}})
+        viewer.zoomTo()
+
+        viewer_html = viewer._make_html()
+        components.html(viewer_html, height=370, width=370)
+    except Exception as e:
+        st.error(f"3D 구조 생성 실패: {e}")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
