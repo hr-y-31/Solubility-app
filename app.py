@@ -230,8 +230,8 @@ DONGGUK_LOGO = "logo/dongguk.logo.png"  # 실제 파일명에 맞게 확인하�
 
 col1, col2, col3 = st.columns([1, 3, 1])
 with col1:
-    if os.path.exists(LAB_LOGO):
-        st.image(LAB_LOGO, width=220)
+    if os.path.exists(Lab.lOGO):
+        st.image(Lab.lOGO, width=220)
 with col3:
-    if os.path.exists(DONGGUK_LOGO):
-        st.image(DONGGUK_LOGO, width=220)
+    if os.path.exists(dongguk_lOGO):
+        st.image(dongguk_lOGO, width=320)
